@@ -1,0 +1,50 @@
+body, html {
+    margin: 0; padding: 0; height: 100vh; width: 100vw;
+    background: #000; overflow: hidden; font-family: 'Poppins', sans-serif;
+}
+
+/* Celebration Overlay */
+#celebration-overlay {
+    position: fixed; inset: 0; background: radial-gradient(circle, #ff4d6d, #590d22);
+    z-index: 1000; display: flex; justify-content: center; align-items: center;
+    text-align: center; color: white; transition: 0.8s ease;
+}
+
+.glow-text { font-family: 'Bungee'; font-size: 2.8rem; color: #ffd700; text-shadow: 0 0 20px #ff4d6d; }
+.cake-icon { font-size: 6rem; margin-bottom: 10px; animation: bounce 1.5s infinite; }
+
+/* Main Scene & Envelope */
+#main-scene { height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; }
+.hidden { display: none !important; }
+
+.envelope-box { position: relative; width: 300px; height: 200px; cursor: pointer; }
+.envelope { position: relative; width: 100%; height: 100%; background: #a4133c; border-radius: 0 0 10px 10px; }
+.flap { position: absolute; top: 0; width: 0; height: 0; border-left: 150px solid transparent; border-right: 150px solid transparent; border-top: 110px solid #ff4d6d; z-index: 2; transition: 0.4s; transform-origin: top; }
+.body { position: absolute; inset: 0; background: #c9184a; clip-path: polygon(0 0, 150px 100px, 100% 0, 100% 100%, 0 100%); z-index: 1; border-radius: 0 0 10px 10px; }
+.seal { position: absolute; top: 85px; left: 50%; transform: translateX(-50%); background: #ffd700; width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 3; font-size: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+
+/* FULL SIZE LETTER MODAL */
+#full-letter-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+    z-index: 2000; display: flex; justify-content: center; align-items: center;
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.letter-hidden { opacity: 0; visibility: hidden; transform: scale(0.5); }
+
+.letter-paper {
+    width: 90%; max-width: 400px; height: 80vh; 
+    background: #fffafa; border-radius: 15px; padding: 40px 25px;
+    box-shadow: 0 0 50px rgba(255, 77, 109, 0.5);
+    position: relative; overflow-y: auto;
+}
+
+.letter-text h2 { font-family: 'Great Vibes', cursive; color: #ff4d6d; font-size: 2.5rem; margin-top: 0; }
+.letter-text p { color: #333; line-height: 1.8; font-size: 1rem; margin-bottom: 20px; }
+.signature { text-align: right; font-family: 'Great Vibes'; font-size: 2rem; color: #ff4d6d; }
+
+.close-btn { position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; color: #aaa; cursor: pointer; }
+
+.hint { color: #ffb3c1; margin-top: 25px; font-style: italic; }
+
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }

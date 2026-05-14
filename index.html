@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Celebration ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Bungee&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Stage 1: The Birthday Blast -->
+    <div id="celebration-overlay" onclick="startCelebration()">
+        <div class="cake-box">
+            <div class="cake-icon">🎂</div>
+            <h1 class="glow-text">HAPPY BIRTHDAY MR Vinoth ❤️ </h1>
+            <p class="tap-text">Tap to open your first gift Dear...</p>
+        </div>
+    </div>
+
+    <!-- Stage 2: The Envelope & Full-Screen Letter -->
+    <div id="main-scene" class="hidden">
+        <div id="confetti-wrapper"></div>
+        
+        <div class="envelope-box" onclick="toggleLetter()">
+            <div class="envelope">
+                <div class="flap"></div>
+                <div class="body"></div>
+                <div class="seal">❤️</div>
+            </div>
+            <p class="hint">Tap to read my heart... ✨</p>
+        </div>
+
+        <!-- THE FULL SIZE LETTER -->
+        <div id="full-letter-overlay" class="letter-hidden">
+            <div class="letter-paper">
+                <button class="close-btn" onclick="toggleLetter()">✕</button>
+                <div class="letter-text">
+                    <h2>My Dear CEO,</h2>
+                    <p>
+                        Today is the most special day because it’s the day you were born. 
+                        wishing you a many more happy returns of the day mr vinoth❤️.keep smile always,
+                        <b>god bless you❤️ </b>
+                    </p>
+                    <p>
+                        From our days at <b>instagram</b> to every moment we’ve 
+                        spent together in <b>Chennai</b>, you have been my greatest support❤️. 
+                        Whether we are waiting at the <b>bus stop</b> due to rain is something Special memories❤️.
+                    </p>
+                    <p>
+                        You are kind, hardworking, and the person who makes me smile the most. 
+                        I am so proud of everything you do. Happy Birthday, vino! ❤️
+                        Here's to a year as amazing as you are.
+                    </p>
+                    <p class="signature"><b>Forever  Yours, sandhiya  as  dhiya❤️<b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
